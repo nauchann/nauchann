@@ -1,11 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>makannnnn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #16a083;
+}
+
+.btn-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ............/navbar/............ *
+
+/* desktop mode............/// */
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #f1dfdf;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  height: 50px;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ............//// Showcase styling ////......... */
+
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("https://png.pngtree.com/background/20211215/original/pngtree-rice-spoon-korean-food-traditional-background-picture-image_1452789.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+.main-title {
+  text-transform: uppercase;
+  margin-top: 1.5em;
+}
+
+/* ......//about us//...... */
+
+#about {
+  padding: 50px 0;
+  background: #f5f5f7;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about h2 {
+  font-size: 2.3rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#about .small {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+
+/* .........../Food Menu/............ */
+
+.food-menu-heading {
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.food-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.food-description .food-price {
+  color: #117964;
+  font-weight: 700;
+  font-size: larger;
+}
+
+
+/* ......../ media query /.......... */
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .navbar .menu-items li {
+    font-size: 1.6rem;
+  }
+
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .logo {
+    position: absolute;
+    top: 06px;
+    right: 15px;
+    font-size: 3rem;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .img-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .img-container .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .showcase-area {
+    height: 50vmax;
+  }
+}
+}
+    </style>
 </head>
+
 <body>
-    <h1>HELLO WORLD</h1>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+            </ul>
+            <h1 class="logo">MakanYUK</h1>
+        </div>
+    </nav>
+    <section class="showcase-area" id="home">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">MAKANAN ENAKK</h1>
+            <p>Mau lihat resep makanan? klik ini yuk.</p>
+            <a href="#food-menu" class="btn btn-primary">Menu</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">About Us</p>
+                <h2>Selamat Datang di MakanYUK!</h2>
+                <p>
+                    Nikmati pengalaman memasak yang mudah dan menyenangkan dengan berbagai 
+                    resep lezat yang kami sajikan. Dari hidangan tradisional hingga kreasi 
+                    modern, setiap resep dilengkapi dengan langkah-langkah detail dan tips 
+                    praktis agar Anda dapat menyajikan masakan terbaik di rumah. Temukan 
+                    inspirasi baru setiap hari dan jadikan momen memasak lebih istimewa bersama 
+                    kami!
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="https://awsimages.detik.net.id/community/media/visual/2021/04/22/5-makanan-enak-dari-indonesia-dan-malaysia-yang-terkenal-enak-5.jpeg?w=700&q=90" alt="food" />
+            </div>
+        </div>
+    </section>
+    <section id="food-menu">
+        <h2 class="food-menu-heading">Food Menu</h2>
+        <div class="food-menu-container container">
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://th.bing.com/th/id/OIP.uWRZiprToOnsYMoocNE-wAHaGP?w=222&h=187&c=7&r=0&o=5&pid=1.7" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Cireng Bumbu Rujak</h2>
+                    <p>
+                        makanan tradisional khas Sunda yang terbuat dari tepung aci atau pati ubi kayu yang digoreng dengan minyak goreng panas.
+                    </p>
+                    <a href="https://www.idntimes.com/food/recipe/putriana-cahya/resep-membuat-cireng-tahu-goreng" class="food-price"> Lihat Cara Membuat </a>
+                </div>
+            </div>
+
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://th.bing.com/th/id/OIP.nIUtKCpHITPKskLlhJgYGwHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7" alt="error" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Spaghetti Aglio e Olio</h2>
+                    <p>
+                        hidangan pasta sederhana khas Italia yang menggabungkan rasa gurih bawang putih, pedasnya cabai, dan aroma minyak zaitun yang kaya.
+                    </p>
+                    <a href="https://www.carolynscooking.com/aglio-e-olio/" class="food-price"> Lihat Cara Membuat </a>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://th.bing.com/th/id/OIP.WaUZ4plDndGDcPLMr7aUvAHaE8?w=263&h=180&c=7&r=0&o=5&pid=1.7" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Tahu Bulat</h2>
+                    <p>
+                        camilan khas Indonesia yang digoreng dadakan, renyah di luar dan lembut di dalam, sering dijajakan dengan suara khas dari penjualnya.
+                    </p>
+                    <a href="https://resepkoki.id/resep/resep-tahu-bulat/" class="food-price"> Lihat Cara Membuat </a>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://th.bing.com/th/id/OIP.Rxsy4kuwAAsrgQcVgu4Y1QHaHa?w=158&h=180&c=7&r=0&o=5&pid=1.7" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Bolu Lapis Legit</h2>
+                    <p>
+                        kue tradisional Indonesia yang kaya rasa dengan tekstur lembut berlapis-lapis, dibuat dari campuran mentega, telur, dan rempah-rempah khas.
+                    </p>
+                    <a href="https://newstempo.github.io/down/post/resep-kue-lapis-legit/" class="food-price"> Lihat Cara Membuat </a>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="data:image/jpeg;base64,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" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Tekwan</h2>
+                    <p>
+                        sup khas Palembang yang berisi bola-bola ikan tenggiri dengan kuah bening gurih, disajikan dengan soun, jamur kuping, dan taburan bawang goreng.
+                    </p>
+                    <a href="https://www.idntraveling.com/2020/07/resep-bikin-tekwan-sederhana-enak-dan.html" class="food-price"> Lihat Cara Membuat </a>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://cdn.idntimes.com/content-images/post/20191001/23421503-1383255311799838-5056910918265339904-njpg-zato-307a79b4bcefdac35e154ea132e5636e.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Es Cendol</h2>
+                    <p>
+                        minuman tradisional Indonesia yang menyegarkan, terbuat dari tepung beras hijau, disajikan dengan santan, gula merah cair, dan es serut.
+                    </p>
+                    <a href="https://www.idntimes.com/food/recipe/naufal-al-rahman-1/resep-membuat-es-cendol" class="food-price"> Lihat Cara Membuat </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer></footer>
+
+</html>
+
 </body>
+
 </html>
